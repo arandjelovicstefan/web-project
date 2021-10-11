@@ -1,0 +1,223 @@
+{
+   "sections": [
+      {
+         "title": "motherboards",
+         "imageUrl": "https://dlcdnwebimgs.asus.com/gain/29FAB7DB-71E9-4145-9D5D-FB43F09F0957",
+         "id": 1,
+         "linkUrl": "shop/motherboards"
+      },
+      {
+         "title": "cpu",
+         "imageUrl": "https://image.coolblue.nl/840x473/content/e54ce3913dc94f29907d83b0366dcfc4",
+         "id": 2,
+         "linkUrl": "shop/cpu"
+      },
+      {
+         "title": "gpu",
+         "imageUrl": "https://www.gizbot.com/images/2018-06/asus-rog-strix-gtx1070-o8g-gaming_1529913912140.jpg",
+         "id": 3,
+         "linkUrl": "shop/gpu"
+      },
+      {
+         "title": "pc",
+         "imageUrl": "https://hexus.net/media/uploaded/2016/9/5c6527a6-d750-4fb5-9e1a-c8f75bc624dc.jpg",
+         "size": "large",
+         "id": 4,
+         "linkUrl": "shop/pc"
+      },
+      {
+         "title": "monitors",
+         "imageUrl": "https://www.pcgamesn.com/wp-content/uploads/2019/05/Asus-ROG-Strix-XG32VQR-review.jpg",
+         "size": "large",
+         "id": 5,
+         "linkUrl": "shop/monitor"
+      }
+   ],
+   "shopItems": [
+      {
+         "id": 1,
+         "title": "motherboards",
+         "routeName": "motherboards",
+         "items": [
+            {
+               "id": 1,
+               "name": "Msi Tomahawk b450 AM4",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 90
+            },
+            {
+               "id": 2,
+               "name": "Asus TUF x570",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 18
+            },
+            {
+               "id": 3,
+               "name": "ASRock b450 Pro4",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 35
+            },
+            {
+               "id": 4,
+               "name": "Msi Z-490-A PRO",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 25
+            },
+            {
+               "id": 5,
+               "name": "Asus Prime b460 PLUS",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 18
+            }
+         ]
+      },
+      {
+         "id": 2,
+         "title": "cpu",
+         "routeName": "cpu",
+         "items": [
+            {
+               "id": 10,
+               "name": "AMD Ryzen 5 5600x",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 220
+            },
+            {
+               "id": 11,
+               "name": "AMD Ryzen 7 5800x",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 280
+            },
+            {
+               "id": 12,
+               "name": "AMD Ryzen 3 3300x",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 110
+            },
+            {
+               "id": 13,
+               "name": "AMD Ryzen 9 5900x",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 160
+            },
+            {
+               "id": 14,
+               "name": "Intel i5-11600K",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 160
+            }
+         ]
+      },
+      {
+         "id": 3,
+         "title": "gpu",
+         "routeName": "gpu",
+         "items": [
+            {
+               "id": 18,
+               "name": "Asus RTX 3090",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 125
+            },
+            {
+               "id": 19,
+               "name": "MSI GTX 1660 TI",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 90
+            },
+            {
+               "id": 20,
+               "name": "Nvidia RTX 3060",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 90
+            },
+            {
+               "id": 21,
+               "name": "EVGA RTX 3060 TI",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 165
+            },
+            {
+               "id": 22,
+               "name": "PNY RTX 3070",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 185
+            }
+         ]
+      },
+      {
+         "id": 4,
+         "title": "pc",
+         "routeName": "pc",
+         "items": [
+            {
+               "id": 23,
+               "name": "Alcom Colossus 3",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 25
+            },
+            {
+               "id": 24,
+               "name": "Alcom Colossus 5",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 20
+            },
+            {
+               "id": 25,
+               "name": "Alcom Gaming Ryzen 7",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 80
+            },
+            {
+               "id": 26,
+               "name": "Alcom Gaming Ultimate",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 80
+            },
+            {
+               "id": 27,
+               "name": "Alcom Gaming Elite",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 45
+            }
+         ]
+      },
+      {
+         "id": 5,
+         "title": "monitors",
+         "routeName": "monitors",
+         "items": [
+            {
+               "id": 30,
+               "name": "Msi Artymis 273CQR 27",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 325
+            },
+            {
+               "id": 31,
+               "name": "Gigabyte G27Q 144hz",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 20
+            },
+            {
+               "id": 32,
+               "name": "Asus TUF Gamning VF24VQE",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 25
+            },
+            {
+               "id": 33,
+               "name": "Acer Nitro ED270",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 25
+            },
+            {
+               "id": 34,
+               "name": "Lenovo G34w-10",
+               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "price": 40
+            }
+         ]
+      }
+   ]
+}

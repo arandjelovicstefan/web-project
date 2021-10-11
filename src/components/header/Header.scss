@@ -1,0 +1,37 @@
+.header {
+   height: 70px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 25px;
+
+   .logo-home {
+      margin-top: 20px;
+      height: 35px;
+      width: 35px;
+   }
+
+   .logo-sale {
+      margin-right: 30px;
+      height: 100%;
+      padding-top: 15px;
+      width: 35px;
+   }
+
+   .options {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .option {
+         padding: 10px 15px;
+         cursor: pointer;
+         border-radius: 5px;
+         &:hover {
+            background-color: rgba(75, 71, 71, 0.226);
+         }
+      }
+   }
+}

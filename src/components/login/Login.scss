@@ -1,0 +1,53 @@
+.sign-in {
+   width: 380px;
+   display: flex;
+   flex-direction: column; //svi itemi idu vertikalno !!
+
+   .title {
+      margin: 10px 0px;
+   }
+
+   .buttons {
+      display: flex;
+      justify-content: space-between;
+   }
+}
+.input {
+   width: 100%;
+   font-size: 18px;
+   border: none;
+   border-bottom: 1px solid gray;
+   display: block;
+   padding: 10px 10px 10px 5px;
+   margin: 25px 0;
+   outline: none;
+}
+.loginBtn {
+   min-width: 165px;
+   width: auto;
+   height: 50px;
+   letter-spacing: 0.5px;
+   line-height: 50px;
+   padding: 0 35px 0 35px;
+   font-size: 15px;
+   background-color: black;
+   color: white;
+   border: none;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+
+   &:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+   }
+   &.googleBtn {
+      background-color: #4285f4;
+      color: white;
+      &:hover {
+         background-color: #357ae8;
+         border: none;
+      }
+   }
+}

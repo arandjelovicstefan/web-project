@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as LogoSale } from '../../assets/sale/sale-tag.svg';
 import { ReactComponent as LogoHome } from '../../assets/home/home.svg';
+import { ReactComponent as Cart } from '../../assets/shop/cart-icon.svg';
 import './Header.scss';
 import { auth } from '../../firebase/Firebase.utils';
+import { connect } from 'react-redux';
+import Dropdown from '../cart/Dropdown';
 
-function Header({ user }) {
+function Header({ currentUser }) {
+   const [dropTrigger, setDropTrigger] = useState(false);
    return (
       <div className='header'>
          <Link to='/'>
@@ -21,7 +25,7 @@ function Header({ user }) {
             <Link className='option' to='/about'>
                ABOUT
             </Link>
-            {user ? (
+            {currentUser ? (
                <div className='option' onClick={() => auth.signOut()}>
                   LOGOUT
                </div>
@@ -30,9 +34,20 @@ function Header({ user }) {
                   LOGIN
                </Link>
             )}
+            <div className='logo-cart' onClick={() => setDropTrigger(!dropTrigger)}>
+               <Cart className='icon' />
+               <span className='counter'>0</span>
+            </div>
          </div>
+         {dropTrigger ? <Dropdown /> : null}
       </div>
    );
 }
 
-export default Header;
+const mapStateToProps = state => {
+   return {
+      currentUser: state.user.currentUser,
+   };
+};
+
+export default connect(mapStateToProps)(Header);

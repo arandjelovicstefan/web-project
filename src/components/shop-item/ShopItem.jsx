@@ -1,8 +1,10 @@
 import React from 'react';
 import './ShopItem.scss';
 import { ReactComponent as ShopLogo } from '../../assets/shop/shop.svg';
+import { connect } from 'react-redux';
+import { AddItem } from '../../redux/cart/Cart.actions';
 
-function ShopItem({ item }) {
+function ShopItem({ item, AddItem }) {
    return (
       <div className='item'>
          <div className='image' style={{ backgroundImage: `url(${item.imageUrl})` }} />
@@ -10,9 +12,15 @@ function ShopItem({ item }) {
             <span className='name'> {item.name} </span>
             <span className='price'> {item.price} </span>
          </div>
-         <ShopLogo className='logo' />
+         <ShopLogo className='logo' onClick={() => AddItem(item)} />
       </div>
    );
 }
 
-export default ShopItem;
+const mapDispatchToProps = dispatch => {
+   return {
+      AddItem: item => dispatch(AddItem(item)),
+   };
+};
+
+export default connect(null, mapDispatchToProps)(ShopItem);

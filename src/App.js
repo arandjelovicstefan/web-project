@@ -1,39 +1,34 @@
 import { Route, Switch } from 'react-router';
-import React, { useEffect, useState } from 'react';
-import Header from './components/header/Header';
-import './App.css';
-import Home from './pages/Home/Home';
-import Shop from './pages/Shop/Shop';
-import LoginRegister from './pages/Login-Register/Login-Register';
+import React, { useEffect } from 'react';
 import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
+import LoginRegister from './pages/Login-Register/Login-Register';
+import { setCurrentUser } from './redux/user/user.actions';
+import { connect } from 'react-redux';
+import Header from './components/header/Header';
+import Shop from './pages/Shop/Shop';
+import Home from './pages/Home/Home';
+import './App.css';
 
-function App() {
-   const [user, setUser] = useState('');
-
+function App({ setCurrentUser }) {
    useEffect(() => {
-      auth.onAuthStateChanged(async user => {
+      auth.onAuthStateChanged(user => {
          if (user) {
-            const userRef = await createUserProfileDocument(user);
-            console.log(userRef);
-            userRef.onSnapshot(snapShot => {
-               console.log(snapShot);
-               setUser({
-                  id: snapShot.id,
-                  ...snapShot.data(),
+            createUserProfileDocument(user).then(response => {
+               response.onSnapshot(snapShot => {
+                  setCurrentUser({
+                     id: snapShot.id,
+                     ...snapShot.data(),
+                  });
                });
             });
          }
-         setUser(user);
+         setCurrentUser(user);
       });
-
-      return () => {
-         setUser(null);
-      };
-   }, []);
+   }, [setCurrentUser]);
 
    return (
       <div>
-         <Header user={user} />
+         <Header />
          <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/shop' component={Shop} />
@@ -43,4 +38,10 @@ function App() {
    );
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+   return {
+      setCurrentUser: user => dispatch(setCurrentUser(user)),
+   };
+};
+
+export default connect(null, mapDispatchToProps)(App); //prvi argument je state, drugi dispatch !!

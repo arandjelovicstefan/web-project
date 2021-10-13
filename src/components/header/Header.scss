@@ -7,8 +7,16 @@
 
    .logo-home {
       margin-top: 20px;
-      height: 35px;
-      width: 35px;
+      height: 55px;
+      width: 55px;
+   }
+
+   .home-text {
+      position: absolute;
+      margin-left: 85px;
+      margin-top: 28px;
+      font-size: 33px;
+      font-family: 'Big Shoulders Stencil Display', cursive;
    }
 
    .logo-sale {
@@ -50,9 +58,6 @@
          padding: 10px 15px;
          cursor: pointer;
          border-radius: 5px;
-         &:hover {
-            background-color: rgba(75, 71, 71, 0.226);
-         }
       }
    }
 }

@@ -37,7 +37,7 @@
       {
          "id": 1,
          "title": "motherboards",
-         "routeName": "motherboards",
+         "routeName": "/motherboards",
          "items": [
             {
                "id": 1,
@@ -74,7 +74,7 @@
       {
          "id": 2,
          "title": "cpu",
-         "routeName": "cpu",
+         "routeName": "/cpu",
          "items": [
             {
                "id": 10,
@@ -111,7 +111,7 @@
       {
          "id": 3,
          "title": "gpu",
-         "routeName": "gpu",
+         "routeName": "/gpu",
          "items": [
             {
                "id": 18,
@@ -148,7 +148,7 @@
       {
          "id": 4,
          "title": "pc",
-         "routeName": "pc",
+         "routeName": "/pc",
          "items": [
             {
                "id": 23,
@@ -185,7 +185,7 @@
       {
          "id": 5,
          "title": "monitors",
-         "routeName": "monitors",
+         "routeName": "/monitors",
          "items": [
             {
                "id": 30,

@@ -4,3 +4,16 @@ export const AddItem = item => {
       payload: item,
    };
 };
+
+export const RemoveItem = item => {
+   return {
+      type: 'REMOVE_ITEM',
+      payload: item,
+   };
+};
+
+export const RemoveAllItems = () => {
+   return {
+      type: 'REMOVE_ALL_ITEMS',
+   };
+};

@@ -1,0 +1,66 @@
+.page {
+   width: 55%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 50px auto 0;
+
+   .title {
+      margin: auto;
+      padding-bottom: 80px;
+      font-size: 35px;
+      font-variant: small-caps;
+   }
+
+   .header {
+      width: 100%;
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid darkgrey;
+
+      .last {
+         width: 10%;
+      }
+
+      .first {
+         width: 30%;
+      }
+      .third {
+         width: 16%;
+      }
+   }
+
+   .infoMsg {
+      color: rgb(31, 165, 31);
+      font-weight: bold;
+   }
+
+   .orderBtn {
+      margin-bottom: 20px;
+      min-width: 165px;
+      height: 50px;
+      letter-spacing: 0.5px;
+      line-height: 50px;
+      padding: 0 35px 0 35px;
+      font-size: 15px;
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+
+      &:hover {
+         background-color: white;
+         color: black;
+         border: 1px solid black;
+      }
+   }
+
+   .total {
+      margin-top: 30px;
+      margin-left: auto;
+      font-size: 36px;
+   }
+}

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
 import { auth, signInWithGoogle } from '../../firebase/Firebase.utils';
-import './Login.scss';
+import './Signin.scss';
 
-function Login() {
+function Signin({ currentUser }) {
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
    const [err, setErr] = useState(null);
-   const [redirect, setRedirect] = useState(false);
 
    const handleSubmit = e => {
       e.preventDefault();
@@ -17,7 +17,6 @@ function Login() {
             setEmail('');
             setPassword('');
             setErr(null);
-            setRedirect(true);
          })
          .catch(err => setErr(err.message));
    };
@@ -25,7 +24,7 @@ function Login() {
    return (
       <div className='sign-in'>
          <h2 className='title'>You already have an account?</h2>
-         <span>Login with your email and password</span>
+         <span>Sign in with your email and password</span>
 
          <form onSubmit={handleSubmit}>
             <input className='input' type='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='email' required />
@@ -33,16 +32,22 @@ function Login() {
             <p className='error'> {err ? err : null} </p>
             <div className='buttons'>
                <button type='submit' className='loginBtn'>
-                  Login
+                  Sign in
                </button>
                <button className='loginBtn googleBtn' onClick={signInWithGoogle}>
-                  Login with Google
+                  Sign in with Google
                </button>
-               {redirect ? <Redirect to='/' /> : null}
+               {currentUser ? <Redirect to='/' /> : null}
             </div>
          </form>
       </div>
    );
 }
 
-export default Login;
+const mapStateToProps = state => {
+   return {
+      currentUser: state.user.currentUser,
+   };
+};
+
+export default connect(mapStateToProps)(Signin);

@@ -1,13 +1,16 @@
 import { Route, Switch } from 'react-router';
 import React, { useEffect } from 'react';
 import { auth, createUserProfileDocument } from './firebase/Firebase.utils';
-import LoginRegister from './pages/Login-Register/Login-Register';
 import { setCurrentUser } from './redux/user/user.actions';
 import { connect } from 'react-redux';
 import Header from './components/header/Header';
 import Shop from './pages/Shop/Shop';
 import Home from './pages/Home/Home';
-import './App.css';
+import Checkout from './pages/Checkout/Checkout';
+import Footer from './components/Footer/Footer';
+import './App.scss';
+import SigninSignup from './pages/Signin-Signup/Signin-Signup';
+import Sale from './pages/Sale/Sale';
 
 function App({ setCurrentUser }) {
    useEffect(() => {
@@ -32,8 +35,11 @@ function App({ setCurrentUser }) {
          <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/shop' component={Shop} />
-            <Route exact path='/login' component={LoginRegister} />
+            <Route exact path='/signin' component={SigninSignup} />
+            <Route exact path='/checkout' component={Checkout} />
+            <Route exact path='/sale' component={Sale} />
          </Switch>
+         <Footer />
       </div>
    );
 }

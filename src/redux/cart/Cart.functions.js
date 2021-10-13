@@ -7,3 +7,10 @@ export const AddItemToCart = (cartItems, cartItemToAdd) => {
 
    return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
 };
+
+export const DeleteItem = (cartItems, itemToRemove) => {
+   let copy = [...cartItems];
+   let index = copy.findIndex(item => item.id === itemToRemove.id);
+   copy.splice(index, 1);
+   return copy;
+};

@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ReactComponent as LogoSale } from '../../assets/sale/sale-tag.svg';
-import { ReactComponent as LogoHome } from '../../assets/home/home.svg';
-import { ReactComponent as Cart } from '../../assets/shop/cart-icon.svg';
+import { ReactComponent as LogoSale } from '../../assets/sale-tag.svg';
+import { ReactComponent as Cart } from '../../assets/cart-icon.svg';
+import home from '../../assets/computer.png';
 import './Header.scss';
 import { auth } from '../../firebase/Firebase.utils';
 import { connect } from 'react-redux';
 import Dropdown from '../cart/Dropdown';
 
-function Header({ currentUser }) {
+function Header({ currentUser, cartItems }) {
    const [dropTrigger, setDropTrigger] = useState(false);
    return (
       <div className='header'>
          <Link to='/'>
-            <LogoHome className='logo-home' />
+            <img src={home} alt='img' className='logo-home' />
          </Link>
+         <span className='home-text'>TECH STORE</span>
          <div className='options'>
             <Link className='logo-sale' to='/sale'>
                <LogoSale />
@@ -27,19 +28,19 @@ function Header({ currentUser }) {
             </Link>
             {currentUser ? (
                <div className='option' onClick={() => auth.signOut()}>
-                  LOGOUT
+                  SIGN OUT
                </div>
             ) : (
-               <Link className='option' to='/login'>
-                  LOGIN
+               <Link className='option' to='/signin'>
+                  SIGN IN
                </Link>
             )}
             <div className='logo-cart' onClick={() => setDropTrigger(!dropTrigger)}>
                <Cart className='icon' />
-               <span className='counter'>0</span>
+               <span className='counter'> {cartItems.reduce((a, b) => a + b.quantity, 0)} </span>
             </div>
          </div>
-         {dropTrigger ? <Dropdown /> : null}
+         {dropTrigger ? <Dropdown setDropTrigger={setDropTrigger} /> : null}
       </div>
    );
 }
@@ -47,6 +48,7 @@ function Header({ currentUser }) {
 const mapStateToProps = state => {
    return {
       currentUser: state.user.currentUser,
+      cartItems: state.cart.cartItems,
    };
 };
 

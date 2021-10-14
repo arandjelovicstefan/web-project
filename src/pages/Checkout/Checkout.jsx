@@ -36,7 +36,11 @@ function Checkout({ cartItems, RemoveItem, currentUser, RemoveAllItems }) {
          <button
             className='orderBtn'
             onClick={() => {
-               return currentUser ? setOrderInfo('Order successfully placed!') & RemoveAllItems() : setOrderInfo('You need to be Signed in to order items!');
+               if (cartItems.length === 0) {
+                  return setOrderInfo('Add items to cart!');
+               } else {
+                  return currentUser ? setOrderInfo('Order successfully placed!') & RemoveAllItems() : setOrderInfo('You need to be Signed in to order items!');
+               }
             }}
          >
             ORDER

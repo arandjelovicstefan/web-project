@@ -23,9 +23,15 @@ function Header({ currentUser, cartItems }) {
             <Link className='option' to='/shop'>
                SHOP
             </Link>
-            <Link className='option' to='/about'>
-               ABOUT
+            <Link className='option' to='/contact'>
+               CONTACT
             </Link>
+            {currentUser ? (
+               <Link className='option' to='/profile'>
+                  PROFILE
+               </Link>
+            ) : null}
+
             {currentUser ? (
                <div className='option' onClick={() => auth.signOut()}>
                   SIGN OUT

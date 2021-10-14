@@ -1,0 +1,26 @@
+.aboutDiv {
+   background-image: url('../../assets/wallpaperbetter.com_1920x1200.jpg');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   width: 1380px;
+   height: 1000px;
+   margin-bottom: 40px;
+
+   .contactInfo {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      position: absolute;
+      font-size: 40px;
+      top: 730px;
+      left: 150px;
+      font-family: 'Big Shoulders Stencil Display', cursive;
+      letter-spacing: 1px;
+   }
+
+   .name,
+   .price {
+      font-size: 13px;
+   }
+}

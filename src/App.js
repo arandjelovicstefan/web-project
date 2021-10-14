@@ -11,6 +11,8 @@ import Footer from './components/Footer/Footer';
 import './App.scss';
 import SigninSignup from './pages/Signin-Signup/Signin-Signup';
 import Sale from './pages/Sale/Sale';
+import Profile from './pages/Profile/Profile';
+import Contact from './pages/Contact/Contact';
 
 function App({ setCurrentUser }) {
    useEffect(() => {
@@ -38,6 +40,8 @@ function App({ setCurrentUser }) {
             <Route exact path='/signin' component={SigninSignup} />
             <Route exact path='/checkout' component={Checkout} />
             <Route exact path='/sale' component={Sale} />
+            <Route exact path='/profile' component={Profile} />
+            <Route exact path='/contact' component={Contact} />
          </Switch>
          <Footer />
       </div>

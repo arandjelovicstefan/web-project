@@ -18,15 +18,15 @@
       padding: 5px;
       width: 40px;
       height: 40px;
-      opacity: 0.7;
       position: absolute;
       top: 5px;
       right: 10px;
       cursor: pointer;
-      opacity: 0.6;
+      background-color: white;
+      border-radius: 50%;
 
       &:hover {
-         padding: 0;
+         padding: 2px;
       }
    }
 

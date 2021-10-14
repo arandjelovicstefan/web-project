@@ -7,11 +7,12 @@ function Footer() {
       <footer className='footer-bottom'>
          <span className='component'>
             Don't have an account yet?{' '}
-            <Link to='/signin' className='btn'>
+            <Link to='/signin' className='signupBtn'>
                Sign up
             </Link>
          </span>
-         <div className='component'>© 2021 Copyright TECH STORE</div>
+         <div className='component'>©2021 TECH STORE</div>
+         <p className='credit'>final it bootcamp project done by stefan arandjelovic</p>
       </footer>
    );
 }

@@ -2,33 +2,31 @@
    "sections": [
       {
          "title": "motherboards",
-         "imageUrl": "https://dlcdnwebimgs.asus.com/gain/29FAB7DB-71E9-4145-9D5D-FB43F09F0957",
+         "imageUrl": "https://i.ytimg.com/vi/MNkHboSL81E/maxresdefault.jpg",
          "id": 1,
          "linkUrl": "shop/motherboards"
       },
       {
          "title": "cpu",
-         "imageUrl": "https://image.coolblue.nl/840x473/content/e54ce3913dc94f29907d83b0366dcfc4",
+         "imageUrl": "https://www.amd.com/system/files/2021-04/781817-amd-radeon-mobile-gpu-1260x709.jpg",
          "id": 2,
          "linkUrl": "shop/cpu"
       },
       {
          "title": "gpu",
-         "imageUrl": "https://www.gizbot.com/images/2018-06/asus-rog-strix-gtx1070-o8g-gaming_1529913912140.jpg",
+         "imageUrl": "https://i.redd.it/kx81jlpj3hl61.jpg",
          "id": 3,
          "linkUrl": "shop/gpu"
       },
       {
          "title": "pc",
-         "imageUrl": "https://hexus.net/media/uploaded/2016/9/5c6527a6-d750-4fb5-9e1a-c8f75bc624dc.jpg",
-         "size": "large",
+         "imageUrl": "https://dlcdnwebimgs.asus.com/files/media/2B37C5BC-FC31-4697-925A-6622E78C5CF9/v1/img/slider5.jpg",
          "id": 4,
          "linkUrl": "shop/pc"
       },
       {
          "title": "monitors",
-         "imageUrl": "https://www.pcgamesn.com/wp-content/uploads/2019/05/Asus-ROG-Strix-XG32VQR-review.jpg",
-         "size": "large",
+         "imageUrl": "https://m.media-amazon.com/images/S/aplus-media/vc/5d95d4d6-fcc2-4c36-b610-496cc54639b3.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
          "id": 5,
          "linkUrl": "shop/monitor"
       }
@@ -42,32 +40,32 @@
             {
                "id": 1,
                "name": "Msi Tomahawk b450 AM4",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "imageUrl": "https://i5.walmartimages.com/asr/7cb87503-30d4-427e-8eef-2eeeb8660de7_1.1bb7e9abc02a801fbfa8c8b4816a956c.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
                "price": 90
             },
             {
                "id": 2,
                "name": "Asus TUF x570",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 18
+               "imageUrl": "https://img.gigatron.rs/img/products/large/image5d3b1c8689826.png",
+               "price": 220
             },
             {
                "id": 3,
                "name": "ASRock b450 Pro4",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 35
+               "imageUrl": "https://img.gigatron.rs/img/products/large/ASRock-B450-Pro4-R2.0-94.png",
+               "price": 70
             },
             {
                "id": 4,
                "name": "Msi Z-490-A PRO",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 25
+               "imageUrl": "https://img.ep-cdn.com/images/500/500/mq/mqekzjtltntzdnsthcts.jpg",
+               "price": 180
             },
             {
                "id": 5,
                "name": "Asus Prime b460 PLUS",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 18
+               "imageUrl": "https://www.stdcomp.rs/images/products/big/19027.jpg",
+               "price": 100
             }
          ]
       },
@@ -79,32 +77,32 @@
             {
                "id": 10,
                "name": "AMD Ryzen 5 5600x",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 220
+               "imageUrl": "https://dijaspora.shop/media/catalog/product/cache/1/small_image/1200x630/9df78eab33525d08d6e5fb8d27136e95/5/9/59971-amd-ryzen-5-3600.jpg",
+               "price": 330
             },
             {
                "id": 11,
                "name": "AMD Ryzen 7 5800x",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 280
+               "imageUrl": "https://i5.walmartimages.com/asr/c717d908-0204-4b1a-a55d-2289698f811f.679f4e1ae02bb5a0a7b46d274032f9b6.jpeg?odnHeight=450&odnWidth=450&odnBg=ffffff",
+               "price": 410
             },
             {
                "id": 12,
                "name": "AMD Ryzen 3 3300x",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 110
+               "imageUrl": "https://www.amd.com/system/files/2020-04/450000-ryzen3-3rd-gen-pib-1260x709_0.png",
+               "price": 170
             },
             {
                "id": 13,
                "name": "AMD Ryzen 9 5900x",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 160
+               "imageUrl": "https://www.imikom.com/194-large_default/amd-ryzen-9-5900x-12-cores-34ghz-49ghz-box.jpg",
+               "price": 550
             },
             {
                "id": 14,
                "name": "Intel i5-11600K",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 160
+               "imageUrl": "https://cdn.mos.cms.futurecdn.net/LqaS4LCfEjwDbk3EZUMugW.jpg",
+               "price": 260
             }
          ]
       },
@@ -115,33 +113,33 @@
          "items": [
             {
                "id": 18,
-               "name": "Asus RTX 3090",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 125
+               "name": "Asus ROG STRIX RTX 3090",
+               "imageUrl": "https://www.skycomputer.rs/uploads/uploaded_pictures/_content_proizvodi/640x512/nvidia-geforce-rtx-3090-24gb-384bit-rog-strix-rtx3090-o24g-g-1c.jpg",
+               "price": 950
             },
             {
                "id": 19,
                "name": "MSI GTX 1660 TI",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 90
+               "imageUrl": "https://img.gigatron.rs/img/products/large/image5c94e28724ad5.png",
+               "price": 250
             },
             {
                "id": 20,
-               "name": "Nvidia RTX 3060",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 90
+               "name": "Zotac Gaming RTX 3060",
+               "imageUrl": "https://www.tehnomanija.rs/UserFiles/products/2021/004/large/160989.webp",
+               "price": 360
             },
             {
                "id": 21,
                "name": "EVGA RTX 3060 TI",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 165
+               "imageUrl": "https://www.ctshop.rs//img/products/2021-06-16/evga-geforce-rtx-3060-xc-gaming-graficka-kartica-12gb-gddr6-192bit_rGnmq_3.jpg",
+               "price": 380
             },
             {
                "id": 22,
                "name": "PNY RTX 3070",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 185
+               "imageUrl": "https://www.pny.com/productimages/146F05E7-12C2-4FAD-B11A-AC2901200F4B/images/XLR8-RTX-3070-EPIC-X-Triple-Fan-P-gr-2.png",
+               "price": 450
             }
          ]
       },
@@ -152,33 +150,33 @@
          "items": [
             {
                "id": 23,
-               "name": "Alcom Colossus 3",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 25
+               "name": "Dell Vostro 3888",
+               "imageUrl": "https://www.ctshop.rs/img/products/2021-07-06/dell-vostro-3888-mt-des08651-kompjuter-intel-octa-core-i7-10700f-8gb-512gb-ssd-geforce-gt730-ubuntu_0wFhf_4.jpg",
+               "price": 750
             },
             {
                "id": 24,
-               "name": "Alcom Colossus 5",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 20
+               "name": "Lenovo V55t-15API",
+               "imageUrl": "https://www.ctshop.rs//img/products/2020-06-30/lenovo-v55t-15api-11cc0000ya-kompjuter-amd-ryzen-3-3200g-4-0ghz-4gb-1tb-radeon-vega-8-dvd-rw_SUEe1_3.jpg",
+               "price": 650
             },
             {
                "id": 25,
-               "name": "Alcom Gaming Ryzen 7",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 80
+               "name": "HP DESKTOP PRO 300",
+               "imageUrl": "https://img.ep-cdn.com/images/500/500/pg/pgmwuqyvsltuxzjsiduf.webp",
+               "price": 540
             },
             {
                "id": 26,
-               "name": "Alcom Gaming Ultimate",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 80
+               "name": "Dell OptiPlex 5070",
+               "imageUrl": "https://img.ep-cdn.com/images/500/500/ow/owrjgowmwjloewgozrsk.webp",
+               "price": 510
             },
             {
                "id": 27,
-               "name": "Alcom Gaming Elite",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 45
+               "name": "HP S01-pF1009ny",
+               "imageUrl": "https://img.ep-cdn.com/images/500/500/mq/mqyqrwnpwqebaplwqyhe.webp",
+               "price": 450
             }
          ]
       },
@@ -190,32 +188,32 @@
             {
                "id": 30,
                "name": "Msi Artymis 273CQR 27",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
+               "imageUrl": "https://asset.msi.com/resize/image/global/product/product_1628575409b5845d7577175b8a419e11a95e451edd.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
                "price": 325
             },
             {
                "id": 31,
                "name": "Gigabyte G27Q 144hz",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 20
+               "imageUrl": "https://dnatauae.com/wp-content/uploads/2021/08/24-012-015-07.jpg",
+               "price": 200
             },
             {
                "id": 32,
                "name": "Asus TUF Gamning VF24VQE",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 25
+               "imageUrl": "https://www.technomarket.rs/image/cache/cache/86001-87000/86327/main/a054-90LM05H0-B01370_201123131357521-0-1-500x500.jpg",
+               "price": 250
             },
             {
                "id": 33,
                "name": "Acer Nitro ED270",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 25
+               "imageUrl": "https://monaliza.com.my/wp-content/uploads/2020/11/Untitled-5.png",
+               "price": 230
             },
             {
                "id": 34,
                "name": "Lenovo G34w-10",
-               "imageUrl": "https://www.bastiaanmulder.nl/wp-content/uploads/2013/11/dummy-image-square.jpg",
-               "price": 40
+               "imageUrl": "https://www.ctshop.rs//product/img/gaming-monitori/lenovo-g34w-1066a1gacbeuva-zakrivljeni-gejmerski-monitor-34-/normal/77008436_6497947843.jpg",
+               "price": 470
             }
          ]
       }

@@ -8,7 +8,7 @@ function Contact() {
             <span>©TECH STORE</span>
             <span>20 Nikola Tesla Street</span>
             <span>Serbia</span>
-            <span>35250 Paracin</span>
+            <span>35246 Paracin</span>
             <span>support@techstore.rs</span>
          </div>
       </div>

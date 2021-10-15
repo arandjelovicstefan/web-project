@@ -14,7 +14,7 @@ function Header({ currentUser, cartItems }) {
    const history = useHistory();
    return (
       <div className='header'>
-         <Link to='/'>
+         <Link to='/web-project'>
             <img src={home} alt='img' className='logo-home' />
          </Link>
          <span className='home-text'>TECH STORE</span>
@@ -35,7 +35,7 @@ function Header({ currentUser, cartItems }) {
             ) : null}
 
             {currentUser ? (
-               <div className='option' onClick={() => auth.signOut() & history.push('/')}>
+               <div className='option' onClick={() => auth.signOut() & history.push('/web-project')}>
                   SIGN OUT
                </div>
             ) : (

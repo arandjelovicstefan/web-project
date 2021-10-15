@@ -36,7 +36,7 @@ function App({ setCurrentUser }) {
       <div>
          <Header />
          <Switch>
-            <Route path='/' component={Home} />
+            <Route exact path='/web-project' component={Home} />
             <Route exact path='/shop' component={Shop} />
             <Route exact path='/signin' component={SigninSignup} />
             <Route exact path='/checkout' component={Checkout} />

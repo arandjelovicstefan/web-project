@@ -1,6 +1,6 @@
 # Web shop project
 
-https://github.com/arandjelovicstefan/web-project
+[CLICK HERE TO VIEW](https://arandjelovicstefan.github.io/web-project/)
 
 ## Instructions to start:
 

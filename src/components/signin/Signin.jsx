@@ -27,8 +27,8 @@ function Signin({ currentUser }) {
          <span>Sign in with your email and password</span>
 
          <form onSubmit={handleSubmit}>
-            <input className='input' type='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='email' required />
-            <input className='input' type='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='password' required />
+            <input className='input' type='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='email' />
+            <input className='input' type='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='password' />
             <p className='error'> {err ? err : null} </p>
             <div className='buttons'>
                <button type='submit' className='loginBtn'>

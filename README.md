@@ -6,18 +6,8 @@
 
 You need to install:
 
-1. node.js (v14.18.1)
-2. json-server (v0.17.0)
-3. react-redux (v7.2.5)
-4. redux-logger (v3.0.6)
-5. redux-persist (v6.0.0)
-6. react-router-dom (v5.3.0)
-7. node-sass (v6.0.1)
-8. nanoid (v3.1.30)
-9. firebase (v8.10.0)
-10.   axios (v0.22.0)
-11.   styled-components (v5.3.1)
-12.   npm - package manager for NodeJS
+1. NodeJs (v14.18.1 or higher)
+2. NPM (v7.24.0 or higher)
 
 Next,you should clone the repo
 
@@ -29,7 +19,7 @@ This application has its own server
 
 1. `git clone` https://github.com/arandjelovicstefan/web-project
 2. `npm install` in root directory
-3. `npm start` as well in root directory
+3. `npm start` in root directory
 
 ## Project description and functionality
 
@@ -44,6 +34,8 @@ This application has its own server
 -  Profil page for logged users with options to save address and view orders.
 
 All data about registered users is saved at https://www.firebase.google.com/
+
+Project is still in development, some functions may not work properly.
 
 ## Technologies used for project
 

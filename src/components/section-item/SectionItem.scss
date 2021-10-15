@@ -1,12 +1,12 @@
-.item {
-   width: 19%;
-   display: flex;
-   flex-direction: column;
+.item-section {
+   margin: 50px 20px;
+   flex: 1 0 20%;
    height: 220px;
+   width: 300px;
    align-items: center;
    position: relative;
 
-   .image {
+   .image-section {
       width: 100%;
       height: 95%;
       background-size: cover;
@@ -14,7 +14,7 @@
       margin-bottom: 5px;
    }
 
-   .logo {
+   .logo-section {
       padding: 5px;
       width: 40px;
       height: 40px;
@@ -30,27 +30,26 @@
       }
    }
 
-   .logo-sale1 {
+   .logo-sale {
       position: absolute;
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       top: 0px;
-      left: 0px;
    }
 
-   .footer {
+   .footer-section {
       width: 100%;
       height: 8%;
       display: flex;
       justify-content: space-between;
       font-size: 13px;
 
-      .name {
+      .name-section {
          width: 85%;
          margin-bottom: 15px;
       }
 
-      .price {
+      .price-section {
          width: 15%;
          text-align: center;
          background-color: rgba(255, 0, 0, 0.575);

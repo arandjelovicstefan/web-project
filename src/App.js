@@ -13,6 +13,7 @@ import SigninSignup from './pages/Signin-Signup/Signin-Signup';
 import Sale from './pages/Sale/Sale';
 import Profile from './pages/Profile/Profile';
 import Contact from './pages/Contact/Contact';
+import AllSections from './components/all-sections/AllSections';
 
 function App({ setCurrentUser }) {
    useEffect(() => {
@@ -36,12 +37,13 @@ function App({ setCurrentUser }) {
          <Header />
          <Switch>
             <Route exact path='/' component={Home} />
-            <Route path='/shop' component={Shop} />
+            <Route exact path='/shop' component={Shop} />
             <Route exact path='/signin' component={SigninSignup} />
             <Route exact path='/checkout' component={Checkout} />
             <Route exact path='/sale' component={Sale} />
             <Route exact path='/profile' component={Profile} />
             <Route exact path='/contact' component={Contact} />
+            <Route exact path='/shop/:sections' component={AllSections} />
          </Switch>
          <Footer />
       </div>

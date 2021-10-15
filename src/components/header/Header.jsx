@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import { ReactComponent as LogoSale } from '../../assets/sale-tag.svg';
 import { ReactComponent as Cart } from '../../assets/cart-icon.svg';
 import home from '../../assets/computer.png';
@@ -10,6 +11,7 @@ import Dropdown from '../cart/Dropdown';
 
 function Header({ currentUser, cartItems }) {
    const [dropTrigger, setDropTrigger] = useState(false);
+   const history = useHistory();
    return (
       <div className='header'>
          <Link to='/'>
@@ -33,7 +35,7 @@ function Header({ currentUser, cartItems }) {
             ) : null}
 
             {currentUser ? (
-               <div className='option' onClick={() => auth.signOut()}>
+               <div className='option' onClick={() => auth.signOut() & history.push('/')}>
                   SIGN OUT
                </div>
             ) : (

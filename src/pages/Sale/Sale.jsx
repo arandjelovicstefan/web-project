@@ -6,6 +6,7 @@ import SectionItem from '../../components/section-item/SectionItem';
 
 function Sale() {
    const [items, setItems] = useState([]);
+   const [searchInput, setSearchInput] = useState('');
 
    useEffect(() => {
       getAllShopItems().then(response => {
@@ -16,10 +17,13 @@ function Sale() {
    return (
       <div>
          <h1 className='sale-h1'>Items on sale</h1>
+         <input className='sale-input' type='search' value={searchInput} onChange={e => setSearchInput(e.target.value)} placeholder='search' />
          <div className='sale-items'>
-            {items.map(item => (
-               <SectionItem key={nanoid()} item={item} />
-            ))}
+            {items
+               .filter(item => item.name.toLowerCase().includes(searchInput))
+               .map(item => (
+                  <SectionItem key={nanoid()} item={item} />
+               ))}
          </div>
       </div>
    );

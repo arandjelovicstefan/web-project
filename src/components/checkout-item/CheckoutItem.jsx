@@ -1,19 +1,17 @@
 import React from 'react';
-import './CheckoutItem.scss';
+import { Styledbutton, StyledCheckout, StyledImage, StyledImageContainer, StyledName, StyledPrice, StyledQuantity } from './CheckoutItem.styled';
 
 function CheckoutItem({ item, RemoveItem }) {
    return (
-      <div className='checkout-item'>
-         <div className='image-container'>
-            <img src={item.imageUrl} alt='img' />
-         </div>
-         <span className='name'> {item.name} </span>
-         <span className='quantity'>{item.quantity}</span>
-         <span className='price'>{item.price}€</span>
-         <div className='remove-button' onClick={() => RemoveItem(item)}>
-            &#10005;
-         </div>
-      </div>
+      <StyledCheckout>
+         <StyledImageContainer>
+            <StyledImage src={item.imageUrl} alt='img' />
+         </StyledImageContainer>
+         <StyledName> {item.name} </StyledName>
+         <StyledQuantity>{item.quantity}</StyledQuantity>
+         <StyledPrice>{item.price}€</StyledPrice>
+         <Styledbutton onClick={() => RemoveItem(item)}>&#10005;</Styledbutton>
+      </StyledCheckout>
    );
 }
 

@@ -13,7 +13,7 @@ import SigninSignup from './pages/Signin-Signup/Signin-Signup';
 import Sale from './pages/Sale/Sale';
 import Profile from './pages/Profile/Profile';
 import Contact from './pages/Contact/Contact';
-import AllSections from './components/all-sections/AllSections';
+import AllSections from './pages/all-sections/AllSections';
 
 function App({ setCurrentUser }) {
    useEffect(() => {
@@ -36,6 +36,7 @@ function App({ setCurrentUser }) {
       <div>
          <Header />
          <Switch>
+            <Route exact path='/' component={Home} />
             <Route exact path='/web-project' component={Home} />
             <Route exact path='/shop' component={Shop} />
             <Route exact path='/signin' component={SigninSignup} />

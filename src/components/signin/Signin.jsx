@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
-import { Redirect } from 'react-router';
 import { auth, signInWithGoogle } from '../../firebase/Firebase.utils';
 import './Signin.scss';
 
-function Signin({ currentUser }) {
+function Signin() {
    const [email, setEmail] = useState('');
    const [password, setPassword] = useState('');
    const [err, setErr] = useState(null);
@@ -27,27 +25,20 @@ function Signin({ currentUser }) {
          <span>Sign in with your email and password</span>
 
          <form onSubmit={handleSubmit}>
-            <input className='input' type='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='email' />
-            <input className='input' type='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='password' />
+            <input className='input' type='email' value={email} onChange={e => setEmail(e.target.value)} placeholder='email' required />
+            <input className='input' type='password' value={password} onChange={e => setPassword(e.target.value)} placeholder='password' required />
             <p className='error'> {err ? err : null} </p>
             <div className='buttons'>
                <button type='submit' className='loginBtn'>
                   Sign in
                </button>
-               <button className='loginBtn googleBtn' onClick={signInWithGoogle}>
+               <div className='loginBtn googleBtn' onClick={signInWithGoogle}>
                   Sign in with Google
-               </button>
-               {currentUser ? <Redirect to='/' /> : null}
+               </div>
             </div>
          </form>
       </div>
    );
 }
 
-const mapStateToProps = state => {
-   return {
-      currentUser: state.user.currentUser,
-   };
-};
-
-export default connect(mapStateToProps)(Signin);
+export default Signin;

@@ -28,10 +28,12 @@ This application has its own server
 -  Home page with basic display of sections.
 -  Shop page with display on 5 random items of each section, with click on section name page will navigate you to specific page of that section with all items listed.
 -  Sale page with listed all items on sale.
+-  Search input on Sale page and on every page of each section.
 -  Add items to cart.
 -  Checkout page and checkout dropdown.
 -  Contact page with basic info.
 -  Profil page for logged users with options to save address and view orders.
+-  Admin section still in development.
 
 All data about registered users is saved at https://www.firebase.google.com/
 
@@ -49,7 +51,6 @@ Project is still in development, some functions may not work properly.
    -  redux-persist
    -  redux-logger
 -  Firebase
-   -  firebase-auth
 -  Git
 -  Google Fonts
 -  Heroku

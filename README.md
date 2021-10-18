@@ -33,7 +33,11 @@ This application has its own server
 -  Checkout page and checkout dropdown.
 -  Contact page with basic info.
 -  Profil page for logged users with options to save address and view orders.
--  Admin section still in development.
+-  Admin section.
+
+If you want to access web page with admin privileges, use this credentials:
+email: admin@techstore.rs
+password: admin1
 
 All data about registered users is saved at https://www.firebase.google.com/
 

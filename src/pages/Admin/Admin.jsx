@@ -13,6 +13,8 @@ function Admin() {
    const [addSelectSale, setAddSelectSale] = useState('');
    const [addPrice, setAddPrice] = useState();
 
+   const [addItemInfo, setAddItemInfo] = useState('');
+
    // const [search, setSearch] = useState('');
    // const [itemsSection, setItemsSection] = useState([]);
    // const [changeSelect, setChangeSelect] = useState([]);
@@ -37,6 +39,10 @@ function Admin() {
       copy.items.push(item);
       console.log(copy);
       addSectionShopItem(sectionsToNr(addSelectSection), copy);
+      setAddName('');
+      setAddUrl('');
+      setAddPrice();
+      setAddItemInfo('Item successfully added!');
    };
 
    // const handleChangeSubmit = e => {
@@ -65,6 +71,7 @@ function Admin() {
                   <option value='false'>No</option>
                </select>
                <input className='input-admin' type='number' placeholder='Price' value={addPrice} onChange={e => setAddPrice(e.target.value)} />
+               <p className='infoMsg'> {addItemInfo} </p>
                <input type='submit' value='ADD' className='submit-admin' />
             </form>
          </div>

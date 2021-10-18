@@ -13,6 +13,11 @@ h3 {
    display: flex;
    flex-direction: column;
 
+   .infoMsg {
+      color: rgb(31, 165, 31);
+      font-weight: bold;
+   }
+
    .input-admin {
       width: 100%;
       font-size: 18px;

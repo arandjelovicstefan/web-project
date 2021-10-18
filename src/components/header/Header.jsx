@@ -28,12 +28,16 @@ function Header({ currentUser, cartItems }) {
             <Link className='option' to='/contact'>
                CONTACT
             </Link>
-            {currentUser ? (
+            {currentUser && currentUser.email !== 'admin@techstore.rs' ? (
                <Link className='option' to='/profile'>
                   PROFILE
                </Link>
             ) : null}
-
+            {currentUser && currentUser.email === 'admin@techstore.rs' ? (
+               <Link className='option' to='/admin'>
+                  ADMIN PAGE
+               </Link>
+            ) : null}
             {currentUser ? (
                <div className='option' onClick={() => auth.signOut() & history.push('/web-project')}>
                   SIGN OUT

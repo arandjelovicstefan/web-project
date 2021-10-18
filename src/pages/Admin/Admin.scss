@@ -1,0 +1,51 @@
+.admin-page {
+   width: 900px;
+   display: flex;
+   justify-content: space-between;
+}
+
+h3 {
+   font-weight: normal;
+}
+
+.add-form {
+   width: 350px;
+   display: flex;
+   flex-direction: column;
+
+   .input-admin {
+      width: 100%;
+      font-size: 18px;
+      border: none;
+      border-bottom: 1px solid gray;
+      display: block;
+      padding: 10px 10px 10px 5px;
+      margin: 25px 0;
+      outline: none;
+   }
+
+   .admin-select {
+      min-width: 165px;
+      width: auto;
+      height: 30px;
+   }
+
+   .submit-admin {
+      margin-bottom: 50px;
+      min-width: 165px;
+      width: auto;
+      height: 50px;
+      letter-spacing: 0.5px;
+      font-size: 15px;
+      background-color: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+         background-color: white;
+         color: black;
+         border: 1px solid black;
+      }
+   }
+}

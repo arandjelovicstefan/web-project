@@ -1,64 +1,74 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { getAllShopItems } from '../../service';
 import { nanoid } from 'nanoid';
+import { sectionsToNr } from './Admin.functions';
+import { addSectionShopItem, getSectionShopItems } from '../../service';
+import './Admin.scss';
 
 function Admin() {
+   const [items, setItems] = useState([]);
    const [addName, setAddName] = useState('');
    const [addUrl, setAddUrl] = useState('');
    const [addSelectSection, setAddSelectSection] = useState('');
    const [addSelectSale, setAddSelectSale] = useState('');
-   const [addPrice, setAddPrice] = useState(0);
+   const [addPrice, setAddPrice] = useState();
 
-   const [search, setSearch] = useState('');
-   const [itemsSection, setItemsSection] = useState([]);
-   const [changeSelect, setChangeSelect] = useState([]);
+   // const [search, setSearch] = useState('');
+   // const [itemsSection, setItemsSection] = useState([]);
+   // const [changeSelect, setChangeSelect] = useState([]);
 
    useEffect(() => {
-      getAllShopItems().then(response => {
-         setItemsSection(response.data);
+      getSectionShopItems(sectionsToNr(addSelectSection)).then(response => {
+         setItems(response.data);
       });
-   }, []);
+   }, [addSelectSection]);
 
    const handleAddSubmit = e => {
       e.preventDefault();
       const item = {
          id: nanoid(),
-         name: { addName },
-         imageUrl: { addUrl },
-         type: { addSelectSection },
-         sale: { addSelectSale },
-         price: { addPrice },
+         name: addName,
+         imageUrl: addUrl,
+         type: addSelectSection,
+         sale: addSelectSale,
+         price: addPrice,
       };
-      //post item u zavisnosti od sekcije, setSelectSection mora da ide u post kroz props za url + ceo item !!!
+      let copy = { ...items };
+      copy.items.push(item);
+      console.log(copy);
+      addSectionShopItem(sectionsToNr(addSelectSection), copy);
    };
 
-   const handleChangeSubmit = e => {
-      e.preventDefault();
-   };
+   // const handleChangeSubmit = e => {
+   //    e.preventDefault();
+   // };
 
    return (
-      <div>
-         <form onSubmit={handleAddSubmit}>
-            <h2>Add item</h2>
-            <input className='input-admin' type='text' placeholder='Name' value={addName} onChange={e => setAddName(e.target.value)} />
-            <input className='input-admin' type='url' placeholder='Url' value={addUrl} onChange={e => setAddUrl(e.target.value)} />
-            <select onChange={e => setAddSelectSection(e.target.value)}>
-               <option value='select'>Select section</option>
-               <option value='motherboard'>Motherboard</option>
-               <option value='pc'>PC</option>
-               <option value='gpu'>GPU</option>
-               <option value='cpu'>CPU</option>
-               <option value='monitor'>Monitor</option>
-            </select>
-            <select onChange={e => setAddSelectSale(e.target.value)}>
-               <option value='true'>True</option>
-               <option value='false'>False</option>
-            </select>
-            <input className='input-admin' type='number' placeholder='Price' value={addPrice} onChange={e => setAddPrice(e.target.value)} />
-            <input type='submit' value='ADD' className='submit-admin' />
-         </form>
-         {'  '}
+      <div className='admin-page'>
+         <div className='add-form'>
+            <form onSubmit={handleAddSubmit}>
+               <h2>Add item</h2>
+               <input className='input-admin' type='text' placeholder='Item name' value={addName} onChange={e => setAddName(e.target.value)} />
+               <input className='input-admin' type='url' placeholder='Image url' value={addUrl} onChange={e => setAddUrl(e.target.value)} />
+               <h3>Choose item type</h3>
+               <select onChange={e => setAddSelectSection(e.target.value)} className='admin-select'>
+                  <option disabled>Select section</option>
+                  <option value='motherboard'>Motherboard</option>
+                  <option value='pc'>PC</option>
+                  <option value='gpu'>GPU</option>
+                  <option value='cpu'>CPU</option>
+                  <option value='monitor'>Monitor</option>
+               </select>
+               <h3>On sale</h3>
+               <select onChange={e => setAddSelectSale(e.target.value)} defaultValue='false' className='admin-select'>
+                  <option value='true'>Yes</option>
+                  <option value='false'>No</option>
+               </select>
+               <input className='input-admin' type='number' placeholder='Price' value={addPrice} onChange={e => setAddPrice(e.target.value)} />
+               <input type='submit' value='ADD' className='submit-admin' />
+            </form>
+         </div>
+         {/* {'  '}
          {'  '}
          <form onSubmit={handleChangeSubmit}>
             <h2>Change item</h2>
@@ -71,7 +81,7 @@ function Admin() {
                <option value='monitors'>Monitor</option>
             </select>
             <input type='search' value={search} onChange={e => setSearch(e.target.value)} />
-         </form>
+         </form> */}
       </div>
    );
 }

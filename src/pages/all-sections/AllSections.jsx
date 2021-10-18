@@ -6,7 +6,6 @@ import { StyledInput, StyledItems, StyledSectionName } from './AllSections.style
 
 function AllSections() {
    const { sections } = useParams();
-   console.log(sections);
    const [section, setSection] = useState();
    const [searchInput, setSearchInput] = useState('');
 

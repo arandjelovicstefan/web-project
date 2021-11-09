@@ -25,8 +25,9 @@ export const StyledName = styled.div`
 `;
 
 export const StyledQuantity = styled.div`
-   width: 15%;
+   width: 25%;
    padding-left: 20px;
+   display: flex;
 `;
 
 export const StyledPrice = styled.div`
@@ -34,6 +35,7 @@ export const StyledPrice = styled.div`
 `;
 
 export const Styledbutton = styled.div`
-   padding-left: 12px;
+   margin: -2px 10px;
+   font-size: 25px;
    cursor: pointer;
 `;

@@ -1,4 +1,4 @@
-import { AddItemToCart, DeleteItem } from './Cart.functions';
+import { AddItemToCart, DeleteItem, Quantity } from './Cart.functions';
 
 const INITIAL_STATE = {
    cartItems: [],
@@ -20,6 +20,16 @@ const cartReducer = (state = INITIAL_STATE, action) => {
          return {
             ...state,
             cartItems: [],
+         };
+      case 'INCREMENT_QUANTITY':
+         return {
+            ...state,
+            cartItems: Quantity(state.cartItems, action.payload, 'plus'),
+         };
+      case 'DECREMENT_QUANTITY':
+         return {
+            ...state,
+            cartItems: Quantity(state.cartItems, action.payload, 'minus'),
          };
       default:
          return state;

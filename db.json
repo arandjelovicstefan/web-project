@@ -169,12 +169,20 @@
           "price": 450
         },
         {
-          "id": "dnbgQj3_QwBj4KwS0aENv",
-          "name": "RTX 2080 Founders Edition",
+          "id": "hCzv0W4x3_uqzZbfVKcia",
+          "name": "fdsafsd",
+          "imageUrl": "https://www.servethehome.com/wp-content/uploads/2019/08/NVIDIA-RTX-2080-SUPER.jpg",
+          "type": "gpu",
+          "sale": "true",
+          "price": "1222"
+        },
+        {
+          "id": "gsdK8vZ5Z-c6deACd4QAq",
+          "name": "RTX 2080",
           "imageUrl": "https://www.servethehome.com/wp-content/uploads/2019/08/NVIDIA-RTX-2080-SUPER.jpg",
           "type": "gpu",
           "sale": "",
-          "price": "750"
+          "price": "600"
         }
       ]
     },

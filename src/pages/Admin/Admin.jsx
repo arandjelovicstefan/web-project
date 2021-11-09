@@ -5,7 +5,7 @@ import { sectionsToNr } from './Admin.functions';
 import { addSectionShopItem, getSectionShopItems } from '../../service';
 import './Admin.scss';
 
-function Admin() {
+function Admin({ currentUser }) {
    const [items, setItems] = useState([]);
    const [addName, setAddName] = useState('');
    const [addUrl, setAddUrl] = useState('');
@@ -41,7 +41,7 @@ function Admin() {
       addSectionShopItem(sectionsToNr(addSelectSection), copy);
       setAddName('');
       setAddUrl('');
-      setAddPrice();
+      setAddPrice('');
       setAddItemInfo('Item successfully added!');
    };
 
@@ -49,7 +49,7 @@ function Admin() {
    //    e.preventDefault();
    // };
 
-   return (
+   return currentUser ? (
       <div className='admin-page'>
          <div className='add-form'>
             <form onSubmit={handleAddSubmit}>
@@ -90,7 +90,7 @@ function Admin() {
             <input type='search' value={search} onChange={e => setSearch(e.target.value)} />
          </form> */}
       </div>
-   );
+   ) : null;
 }
 
 const mapStateToProps = state => {

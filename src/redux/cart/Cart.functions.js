@@ -9,8 +9,18 @@ export const AddItemToCart = (cartItems, cartItemToAdd) => {
 };
 
 export const DeleteItem = (cartItems, itemToRemove) => {
+   return cartItems.filter(item => item.id !== itemToRemove.id);
+};
+
+export const Quantity = (cartItems, cartItemToModify, plusMinus) => {
    let copy = [...cartItems];
-   let index = copy.findIndex(item => item.id === itemToRemove.id);
-   copy.splice(index, 1);
+   let findItem = copy.find(item => item.id === cartItemToModify.id);
+   if (findItem.quantity >= 1 && plusMinus === 'plus') {
+      findItem.quantity += 1;
+   } else if (findItem.quantity >= 2 && plusMinus === 'minus') {
+      findItem.quantity -= 1;
+   } else if (findItem.quantity === 1 && plusMinus === 'minus') {
+      copy = copy.filter(item => item.id !== cartItemToModify.id);
+   }
    return copy;
 };

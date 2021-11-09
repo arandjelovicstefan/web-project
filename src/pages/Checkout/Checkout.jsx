@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import CheckoutItem from '../../components/checkout-item/CheckoutItem';
-import { RemoveAllItems, RemoveItem } from '../../redux/cart/Cart.actions';
+import { DecrementQty, IncrementQty, RemoveAllItems, RemoveItem } from '../../redux/cart/Cart.actions';
 import './Checkout.scss';
 
-function Checkout({ cartItems, RemoveItem, currentUser, RemoveAllItems }) {
+function Checkout({ cartItems, RemoveItem, currentUser, RemoveAllItems, IncrementQty, DecrementQty }) {
    const [orderInfo, setOrderInfo] = useState(null);
    return (
       <div className='page'>
@@ -27,7 +27,7 @@ function Checkout({ cartItems, RemoveItem, currentUser, RemoveAllItems }) {
             </div>
          </div>
          {cartItems.map(item => (
-            <CheckoutItem key={item.id} item={item} RemoveItem={RemoveItem} />
+            <CheckoutItem key={item.id} item={item} RemoveItem={RemoveItem} IncrementQty={IncrementQty} DecrementQty={DecrementQty} />
          ))}
          <p className={currentUser ? 'infoMsg' : ''}> {orderInfo} </p>
          <div className='total'>
@@ -60,6 +60,8 @@ const mapDispatchToProps = dispatch => {
    return {
       RemoveItem: item => dispatch(RemoveItem(item)),
       RemoveAllItems: () => dispatch(RemoveAllItems()),
+      IncrementQty: item => dispatch(IncrementQty(item)),
+      DecrementQty: item => dispatch(DecrementQty(item)),
    };
 };
 

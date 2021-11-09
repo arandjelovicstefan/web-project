@@ -15,11 +15,9 @@ Next,you should clone the repo
 2. Go to project root directory and start `npm install`
 3. After that, `npm start` to start the app
 
-This application has its own server
+This application has its own server, you can use provided also there is available JSON-SERVER.
 
-1. `git clone` https://github.com/arandjelovicstefan/web-project
-2. `npm install` in root directory
-3. `npm start` in root directory
+-  In order to use JSON-SERVER you will need to change URL's in service.js file to `http://localhost:3006`
 
 ## Project description and functionality
 

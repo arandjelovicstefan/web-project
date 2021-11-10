@@ -15,12 +15,11 @@ export const DeleteItem = (cartItems, itemToRemove) => {
 export const Quantity = (cartItems, cartItemToModify, plusMinus) => {
    let copy = [...cartItems];
    let findItem = copy.find(item => item.id === cartItemToModify.id);
-   if (findItem.quantity >= 1 && plusMinus === 'plus') {
-      findItem.quantity += 1;
-   } else if (findItem.quantity >= 2 && plusMinus === 'minus') {
-      findItem.quantity -= 1;
-   } else if (findItem.quantity === 1 && plusMinus === 'minus') {
+   if (findItem.quantity === 1 && plusMinus === 'minus') {
       copy = copy.filter(item => item.id !== cartItemToModify.id);
+   } else {
+      if (plusMinus === 'minus') findItem.quantity -= 1;
+      if (plusMinus === 'plus') findItem.quantity += 1;
    }
    return copy;
 };

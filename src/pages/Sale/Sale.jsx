@@ -10,14 +10,22 @@ function Sale() {
 
    useEffect(() => {
       getAllShopItems().then(response => {
-         response.data.map(group => group.items.filter(items => items.sale === true).map(item => setItems(prev => [...prev, item])));
+         response.data.map(group =>
+            group.items.filter(items => items.sale === true).map(item => setItems(prev => [...prev, item]))
+         );
       });
    }, []);
 
    return (
       <div>
          <h1 className='sale-h1'>Items on sale</h1>
-         <input className='sale-input' type='search' value={searchInput} onChange={e => setSearchInput(e.target.value)} placeholder='search' />
+         <input
+            className='sale-input'
+            type='search'
+            value={searchInput}
+            onChange={e => setSearchInput(e.target.value)}
+            placeholder='search'
+         />
          <div className='sale-items'>
             {items
                .filter(item => item.name.toLowerCase().includes(searchInput))

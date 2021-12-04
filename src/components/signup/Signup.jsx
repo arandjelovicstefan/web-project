@@ -35,9 +35,30 @@ function Signup({ currentUser }) {
          <h2 className='title'>Don't have an account yet?</h2>
          <span>Sign up with your email and password</span>
          <form onSubmit={handleSubmit}>
-            <input className='input' type='email' placeholder='email' value={email} onChange={e => setEmail(e.target.value)} required />
-            <input className='input' type='password' placeholder='password' value={password} onChange={e => setPassword(e.target.value)} required />
-            <input className='input' type='password' placeholder='confirm password' value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} required />
+            <input
+               className='input'
+               type='email'
+               placeholder='email'
+               value={email}
+               onChange={e => setEmail(e.target.value)}
+               required
+            />
+            <input
+               className='input'
+               type='password'
+               placeholder='password'
+               value={password}
+               onChange={e => setPassword(e.target.value)}
+               required
+            />
+            <input
+               className='input'
+               type='password'
+               placeholder='confirm password'
+               value={confirmPassword}
+               onChange={e => setConfirmPassword(e.target.value)}
+               required
+            />
             <p className='error'> {err ? err : null} </p>
             <button className='button' type='submit'>
                Sign up

@@ -1,5 +1,13 @@
 import React from 'react';
-import { Styledbutton, StyledCheckout, StyledImage, StyledImageContainer, StyledName, StyledPrice, StyledQuantity } from './CheckoutItem.styled';
+import {
+   Styledbutton,
+   StyledCheckout,
+   StyledImage,
+   StyledImageContainer,
+   StyledName,
+   StyledPrice,
+   StyledQuantity,
+} from './CheckoutItem.styled';
 
 function CheckoutItem({ item, RemoveItem, IncrementQty, DecrementQty }) {
    return (

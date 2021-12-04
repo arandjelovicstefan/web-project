@@ -8,7 +8,13 @@ function Dropdown({ cartItems, setDropTrigger }) {
    const history = useHistory();
    return (
       <StyledDropdown>
-         <StyledCartItems>{cartItems.length !== 0 ? cartItems.map(item => <CartItem key={item.id} item={item} />) : <StyledEmptyCart>Add items to cart</StyledEmptyCart>}</StyledCartItems>
+         <StyledCartItems>
+            {cartItems.length !== 0 ? (
+               cartItems.map(item => <CartItem key={item.id} item={item} />)
+            ) : (
+               <StyledEmptyCart>Add items to cart</StyledEmptyCart>
+            )}
+         </StyledCartItems>
          <StyledButton onClick={() => history.push('/checkout') & setDropTrigger(false)}>CHECKOUT</StyledButton>
       </StyledDropdown>
    );

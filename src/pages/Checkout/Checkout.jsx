@@ -27,7 +27,13 @@ function Checkout({ cartItems, RemoveItem, currentUser, RemoveAllItems, Incremen
             </div>
          </div>
          {cartItems.map(item => (
-            <CheckoutItem key={item.id} item={item} RemoveItem={RemoveItem} IncrementQty={IncrementQty} DecrementQty={DecrementQty} />
+            <CheckoutItem
+               key={item.id}
+               item={item}
+               RemoveItem={RemoveItem}
+               IncrementQty={IncrementQty}
+               DecrementQty={DecrementQty}
+            />
          ))}
          <p className={currentUser ? 'infoMsg' : ''}> {orderInfo} </p>
          <div className='total'>
@@ -39,7 +45,9 @@ function Checkout({ cartItems, RemoveItem, currentUser, RemoveAllItems, Incremen
                if (cartItems.length === 0) {
                   return setOrderInfo('Add items to cart!');
                } else {
-                  return currentUser ? setOrderInfo('Order successfully placed!') & RemoveAllItems() : setOrderInfo('You need to be Signed in to order items!');
+                  return currentUser
+                     ? setOrderInfo('Order successfully placed!') & RemoveAllItems()
+                     : setOrderInfo('You need to be Signed in to order items!');
                }
             }}
          >

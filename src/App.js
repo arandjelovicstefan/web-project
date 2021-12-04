@@ -15,6 +15,7 @@ import Profile from './pages/Profile/Profile';
 import Contact from './pages/Contact/Contact';
 import AllSections from './pages/all-sections/AllSections';
 import Admin from './pages/Admin/Admin';
+import SingleItemPage from './pages/Single-item-page/SingleItemPage';
 
 function App({ setCurrentUser }) {
    useEffect(() => {
@@ -47,6 +48,7 @@ function App({ setCurrentUser }) {
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/shop/:sections' component={AllSections} />
             <Route exact path='/admin' component={Admin} />
+            <Route exact path='/shop/:sections/:id' component={SingleItemPage} />
          </Switch>
          <Footer />
       </div>

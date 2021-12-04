@@ -54,8 +54,20 @@ function Admin({ currentUser }) {
          <div className='add-form'>
             <form onSubmit={handleAddSubmit}>
                <h2>Add item</h2>
-               <input className='input-admin' type='text' placeholder='Item name' value={addName} onChange={e => setAddName(e.target.value)} />
-               <input className='input-admin' type='url' placeholder='Image url' value={addUrl} onChange={e => setAddUrl(e.target.value)} />
+               <input
+                  className='input-admin'
+                  type='text'
+                  placeholder='Item name'
+                  value={addName}
+                  onChange={e => setAddName(e.target.value)}
+               />
+               <input
+                  className='input-admin'
+                  type='url'
+                  placeholder='Image url'
+                  value={addUrl}
+                  onChange={e => setAddUrl(e.target.value)}
+               />
                <h3>Choose item type</h3>
                <select onChange={e => setAddSelectSection(e.target.value)} className='admin-select'>
                   <option disabled>Select section</option>
@@ -70,7 +82,13 @@ function Admin({ currentUser }) {
                   <option value='true'>Yes</option>
                   <option value='false'>No</option>
                </select>
-               <input className='input-admin' type='number' placeholder='Price' value={addPrice} onChange={e => setAddPrice(e.target.value)} />
+               <input
+                  className='input-admin'
+                  type='number'
+                  placeholder='Price'
+                  value={addPrice}
+                  onChange={e => setAddPrice(e.target.value)}
+               />
                <p className='infoMsg'> {addItemInfo} </p>
                <input type='submit' value='ADD' className='submit-admin' />
             </form>

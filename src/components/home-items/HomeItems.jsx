@@ -15,7 +15,15 @@ function HomeItems() {
    return (
       <StyledHome>
          {setions.map(section => {
-            return <HomeItem key={section.id} title={section.title} imageUrl={section.imageUrl} size={section.size} linkUrl={section.linkUrl} />;
+            return (
+               <HomeItem
+                  key={section.id}
+                  title={section.title}
+                  imageUrl={section.imageUrl}
+                  size={section.size}
+                  linkUrl={section.linkUrl}
+               />
+            );
          })}
       </StyledHome>
    );

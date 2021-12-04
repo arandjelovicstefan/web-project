@@ -5,6 +5,10 @@
    width: 300px;
    align-items: center;
    position: relative;
+   transition: transform 0.2s;
+   &:hover {
+      transform: scale(1.1);
+   }
 
    .image-section {
       width: 100%;
@@ -12,6 +16,7 @@
       background-size: cover;
       background-position: center;
       margin-bottom: 5px;
+      cursor: pointer;
    }
 
    .logo-section {
